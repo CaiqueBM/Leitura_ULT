@@ -5,7 +5,10 @@ import time
 
 def recarregar_pagina():
     # Configuração do Selenium
-    driver = webdriver.Chrome()
+
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(options=options)
 
     url_att1 = f"https://pages.solarz.com.br/shareable/usina/f80e8b26-d0f3-4735-a19a-015b4c1092fe"
     url_att2 = f"https://pages.solarz.com.br/shareable/usina/c81109eb-cedc-4e89-8bc7-c7e643109806"
