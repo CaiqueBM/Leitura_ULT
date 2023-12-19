@@ -5,8 +5,11 @@ import sqlite3
 from dados import gerar_tabelas
 from SQLtoCSV import transformar
 from envio import enviar_mensagem
+from carregar import recarregar_pagina
+
 
 gerar_tabelas()
+recarregar_pagina()
 
 ids = [578496, 667618, 686932]
 
