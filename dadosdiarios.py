@@ -11,7 +11,7 @@ from carregar import recarregar_pagina
 gerar_tabelas()
 recarregar_pagina()
 
-ids = [578496, 667618, 686932]
+ids = [578496, 667618, 686932, 767468]
 
 data_atual = datetime.now().strftime("%Y-%m-%d")
 
@@ -51,7 +51,7 @@ for usina_id in ids:
     df = pd.concat([df, df_usina], ignore_index=True)
 
 # Conectar ao banco de dados e salvar o DataFrame
-conn = sqlite3.connect("dados.db")
+conn = sqlite3.connect("dados_min.db")
 df.to_sql(
     "dados", conn, index=False, if_exists="append"
 )  # Use "replace" se desejar substituir a tabela existente

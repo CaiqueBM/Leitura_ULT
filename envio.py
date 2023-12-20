@@ -10,6 +10,8 @@ def enviar_mensagem(df):
         f"⚡"
         f"{df.loc[df['ULT'] == 'ULT - 1', 'ULT'].iloc[0]} - {df.loc[df['ULT'] == 'ULT - 1', 'GERACAO'].iloc[0]} kWh \r\n"
         f"⚡"
+        f"{df.loc[df['ULT'] == 'ULT 2', 'ULT'].iloc[0]} - {df.loc[df['ULT'] == 'ULT 2', 'GERACAO'].iloc[0]} kWh \r\n"
+        f"⚡"
         f"{df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'ULT'].iloc[0]} - {df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'GERACAO'].iloc[0]} kWh \r\n"
         f"⚡"
         f"{df.loc[df['ULT'] == 'ULT - 4', 'ULT'].iloc[0]} - {df.loc[df['ULT'] == 'ULT - 4', 'GERACAO'].iloc[0]} kWh"
