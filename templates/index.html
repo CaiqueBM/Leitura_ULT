@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas ABS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui-1.13.2/jquery-ui.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery-ui-1.13.2/jquery-ui.min.js') }}"></script>
+    
+    <script>
+        $(function () {
+            // Inicialize o datepicker nos elementos de entrada de texto com a classe 'datepicker'
+            $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Consulta de Dados</h1>
+    <form action="/resultado" method="post">
+        <label for="data_inicial">Data Inicial:</label>
+        <input type="text" name="data_inicial" class="datepicker" required>
+        <br>
+        <label for="data_final">Data Final:</label>
+        <input type="text" name="data_final" class="datepicker" required>
+        <br>
+        <label for="nome_ult">Escolha ULT:</label>
+        <select class="input_ult" name="nome_ult" required>
+            {% for nome in nomes_ult %}
+            <option value="{{ nome }}">{{ nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Buscar Dados</button>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui-1.13.2/themes/base/jquery-ui.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery-ui-1.13.2/jquery-ui.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-6aGpP5N0+z0tPXG1shb0CtvbZ4umrt6X6q9QghcAva/7k6q3l6I0eNjDRhu4iv2dfAD2TC2P0qc9ZIa26eKtkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script>
+        $(function () {
+            $(".datepicker").datepicker();
+        });
+    </script>
+</head>
+
+<body>
+    <a href="{{ url_for('index') }}" class="back-button-container">
+        <button class="back-button">Voltar para a Página Inicial</button>
+    </a>
+
+    <h1>Resultados da Consulta</h1>
+    <h2> PERIODO: {{ data_inicial }} a {{ data_final }}</h2>
+    <h2 class="sum-geracao">GERACAO TOTAL: {{ sum_geracao }}</h2>
+    <div class="result-container">
+
+        <table border="1" class="right-align">
+            <tr>
+                <th>DATA</th>
+                <th>GERACAO (kWh)</th>
+            </tr>
+            {% for resultado in resultados %}
+            <tr>
+                <td>{{ resultado[0].strftime('%d/%m/%Y') }}</td>
+                <td>{{ resultado[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <br>
+
+</body>
+
+</html>

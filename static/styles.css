@@ -1,0 +1,148 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 50px 0 0;
+    background-color: var(--background);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Centraliza a tabela horizontalmente */
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Adiciona espaçamento abaixo do título */
+}
+
+
+
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sum-geracao {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.result-container {
+    margin-top: 20px;
+    width: 100%;
+    /* Define a largura total do contêiner */
+    overflow-x: auto;
+}
+
+.table-container {
+    width: 100%;
+    /* Ajustado para ocupar 100% da largura do contêiner pai */
+    margin-top: 20px;
+}
+
+
+
+/* Adiciona uma regra de estilo quando o select estiver focado */
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    /* Altere para a cor desejada */
+}
+
+/* Adiciona estilos ao ícone do calendário no input com a classe datepicker */
+.ui-datepicker-trigger {
+    background: url("caminho-para-o-seu-icone.png") no-repeat center center;
+    width: 16px;
+    /* Ajuste conforme necessário */
+    height: 16px;
+    /* Ajuste conforme necessário */
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 5px;
+    /* Adiciona um espaçamento à esquerda do ícone */
+}
+
+
+/* Adicione este código para estilizar os diferentes temas */
+
+:root {
+    --background-light: #ffffff;
+    --background-dark: #1e1e1e;
+    --text-light: #333333;
+    --text-dark: #ffffff;
+    --border-light: #dddddd;
+    --border-dark: #333333;
+}
+
+[data-theme='light'] {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --border: var(--border-light);
+}
+
+[data-theme='dark'] {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --border: var(--border-dark);
+}
