@@ -14,7 +14,7 @@ recarregar_pagina()
 ids = [578496, 667618, 686932, 767468]
 
 data_atual = datetime.now().strftime("%Y-%m-%d")
-
+  
 resultados = []
 df = pd.DataFrame()
 
