@@ -40,9 +40,6 @@ button {
     margin: 5px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-button {
     background-color: #3555bb;
     color: white;
     cursor: pointer;
@@ -110,8 +107,8 @@ h1 {
 img {
     max-width: 100%;
     height: auto;
-    width: 300px;
-    /* Substitua este valor pelo tamanho desejado */
+    width: 200px;
+    padding-bottom: 10px;
 }
 
 
