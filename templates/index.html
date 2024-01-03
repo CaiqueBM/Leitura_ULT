@@ -9,7 +9,7 @@
     <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui-1.13.2/jquery-ui.min.css') }}">
     <script src="{{ url_for('static', filename='jquery-ui-1.13.2/jquery-ui.min.js') }}"></script>
-    
+
     <script>
         $(function () {
             // Inicialize o datepicker nos elementos de entrada de texto com a classe 'datepicker'
@@ -19,7 +19,8 @@
 </head>
 
 <body>
-    <h1>Consulta de Dados</h1>
+    <img src="{{ url_for('static', filename='Logo_transparente.png') }}" alt="ABS Engenharia">
+    <h2>CONSULTA DE DADOS</h2>
     <form action="/resultado" method="post">
         <label for="data_inicial">Data Inicial:</label>
         <input type="text" name="data_inicial" class="datepicker" required>

@@ -53,7 +53,7 @@ for usina_id in ids:
 # Conectar ao banco de dados e salvar o DataFrame
 conn = sqlite3.connect("dados_min.db")
 df.to_sql(
-    "dados", conn, index=False, if_exists="append"
+    "dados_diarios", conn, index=False, if_exists="append"
 )  # Use "replace" se desejar substituir a tabela existente
 conn.close()
 

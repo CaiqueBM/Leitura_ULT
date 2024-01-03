@@ -18,9 +18,8 @@ form {
     margin: 20px auto;
 }
 
-input[type="text"],
-button {
-    width: 100%;
+input[type="text"] {
+    width: 92%;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
@@ -36,14 +35,22 @@ select {
 }
 
 button {
-    background-color: #4CAF50;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3555bb;
     color: white;
     cursor: pointer;
     margin-top: 20px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2a3d7e;
 }
 
 table {
@@ -100,6 +107,12 @@ h1 {
     margin-top: 20px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    /* Substitua este valor pelo tamanho desejado */
+}
 
 
 /* Adiciona uma regra de estilo quando o select estiver focado */
@@ -121,28 +134,4 @@ select:focus {
     cursor: pointer;
     margin-left: 5px;
     /* Adiciona um espaçamento à esquerda do ícone */
-}
-
-
-/* Adicione este código para estilizar os diferentes temas */
-
-:root {
-    --background-light: #ffffff;
-    --background-dark: #1e1e1e;
-    --text-light: #333333;
-    --text-dark: #ffffff;
-    --border-light: #dddddd;
-    --border-dark: #333333;
-}
-
-[data-theme='light'] {
-    --background: var(--background-light);
-    --text: var(--text-light);
-    --border: var(--border-light);
-}
-
-[data-theme='dark'] {
-    --background: var(--background-dark);
-    --text: var(--text-dark);
-    --border: var(--border-dark);
 }

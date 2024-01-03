@@ -22,19 +22,19 @@
 </head>
 
 <body>
+    <img src="{{ url_for('static', filename='Logo_transparente.png') }}" alt="ABS Engenharia">
     <a href="{{ url_for('index') }}" class="back-button-container">
         <button class="back-button">Voltar para a Página Inicial</button>
     </a>
 
-    <h1>Resultados da Consulta</h1>
-    <h2> PERIODO: {{ data_inicial }} a {{ data_final }}</h2>
-    <h2 class="sum-geracao">GERACAO TOTAL: {{ sum_geracao }}</h2>
+    <h2> PERÍODO: {{ data_inicial }} a {{ data_final }}</h2>
+    <h2 class="sum-geracao">GERAÇÃO TOTAL: {{ sum_geracao }}</h2>
     <div class="result-container">
 
         <table border="1" class="right-align">
             <tr>
                 <th>DATA</th>
-                <th>GERACAO (kWh)</th>
+                <th>GERAÇÃO (kWh)</th>
             </tr>
             {% for resultado in resultados %}
             <tr>
