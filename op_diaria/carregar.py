@@ -16,9 +16,7 @@ def recarregar_pagina():
     options.add_argument("--no-sandbox")
     options.add_argument("--enable-logging --v=1")
 
-    driver = webdriver.Chrome(
-        executable_path="/usr/local/bin/chromedriver", options=options
-    )
+    driver = webdriver.Chrome(options=options)
 
     url_att1 = f"https://pages.solarz.com.br/shareable/usina/f80e8b26-d0f3-4735-a19a-015b4c1092fe"
     url_att1_1 = (
