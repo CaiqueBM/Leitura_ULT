@@ -14,6 +14,8 @@ def recarregar_pagina():
     options.add_argument("--headless")
     # options.binary_location = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
+    options.add_argument("--enable-logging --v=1")
+
     driver = webdriver.Chrome(
         executable_path="/usr/local/bin/chromedriver", options=options
     )
