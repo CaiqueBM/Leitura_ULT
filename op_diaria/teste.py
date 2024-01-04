@@ -6,17 +6,7 @@ from selenium.common.exceptions import TimeoutException
 import time
 
 
-mensagem_whatsapp = (
-    f"Geração total diária: %0A"
-    f"◉"
-    f"{df.loc[df['ULT'] == 'ULT - 1', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT - 1', 'GERACAO'].iloc[0]} kWh %0A"
-    f"◉"
-    f"{df.loc[df['ULT'] == 'ULT 2', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT 2', 'GERACAO'].iloc[0]} kWh %0A"
-    f"◉"
-    f"{df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'GERACAO'].iloc[0]} kWh %0A"
-    f"◉"
-    f"{df.loc[df['ULT'] == 'ULT - 4', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT - 4', 'GERACAO'].iloc[0]} kWh %0A"
-)
+mensagem_whatsapp = f"Geração total diária: %0A" f"◉"
 
 mensagem_codificada = mensagem_whatsapp
 
