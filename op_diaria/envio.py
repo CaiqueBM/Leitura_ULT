@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
 import time
+from selenium.webdriver.common.keys import Keys
 
 
 # --------------------- MENSAGEM  WHATSAPP ------------------------
@@ -28,7 +29,6 @@ def enviar_mensagem(df):
     # options.binary_location  = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
     options.add_argument("--headless")
-    options.add_argument("--enable-logging --v=1")
     options.add_argument("--user-data-dir=/home/abs/.config/google-chrome")
     # provide the profile name with which we want to open browser
     options.add_argument("--profile-directory=Profile 4")
@@ -69,7 +69,7 @@ def enviar_mensagem(df):
 
     button2 = driver.find_element(
         By.XPATH,
-        "//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
+        "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
     )
     time.sleep(2)
     button2.click()
