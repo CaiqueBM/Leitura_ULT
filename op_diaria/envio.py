@@ -30,10 +30,8 @@ def enviar_mensagem(df):
     options.add_argument("--headless")
     options.add_argument("--enable-logging --v=1")
 
-    options.add_argument(
-        "--user-data-dir=/Home/.config/google-chrome"
-    )  # Path to your chrome profile
-    options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
+    # options.add_argument("--user-data-dir=/Home/.config/google-chrome")  # Path to your chrome profile
+    # options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
     driver = webdriver.Chrome(options=options)
 
     # options = webdriver.ChromeOptions()
