@@ -2,22 +2,25 @@ import pandas as pd
 import pywhatkit
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 import time
 from urllib.parse import quote
-from selenium.webdriver.chrome.options import Options
 
 
 # --------------------- MENSAGEM WHATSAPP ------------------------
 def enviar_mensagem(df):
     mensagem_whatsapp = (
         f"Geração total diária: %0A"
-        f"✔"
+        f"◉"
         f"{df.loc[df['ULT'] == 'ULT - 1', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT - 1', 'GERACAO'].iloc[0]} kWh %0A"
-        f"✔"
+        f"◉"
         f"{df.loc[df['ULT'] == 'ULT 2', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT 2', 'GERACAO'].iloc[0]} kWh %0A"
-        f"✔"
+        f"◉"
         f"{df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT 3 - Back Up ', 'GERACAO'].iloc[0]} kWh %0A"
-        f"✔"
+        f"◉"
         f"{df.loc[df['ULT'] == 'ULT - 4', 'ULT'].iloc[0]}: {df.loc[df['ULT'] == 'ULT - 4', 'GERACAO'].iloc[0]} kWh %0A"
     )
 
@@ -44,6 +47,7 @@ def enviar_mensagem(df):
 
     # ULT 1
     driver.get(url)
+
     time.sleep(20)
 
     # pywhatkit.sendwhatmsg_instantly("+5527999438898", mensagem_whatsapp, 10, False, 15)
@@ -62,12 +66,13 @@ def enviar_mensagem(df):
     )
     time.sleep(5)
     button1.click()
-    time.sleep(90)
+    time.sleep(100)
 
+    elementoExiste()
     button2 = driver.find_element(
         By.XPATH,
         "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
     )
-    time.sleep(10)
+    time.sleep(2)
     button2.click()
     time.sleep(5)

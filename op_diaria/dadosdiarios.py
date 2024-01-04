@@ -14,7 +14,7 @@ recarregar_pagina()
 ids = [578496, 667618, 686932, 767468]
 
 data_atual = datetime.now().strftime("%Y-%m-%d")
-  
+
 resultados = []
 df = pd.DataFrame()
 
@@ -51,7 +51,7 @@ for usina_id in ids:
     df = pd.concat([df, df_usina], ignore_index=True)
 
 # Conectar ao banco de dados e salvar o DataFrame
-conn = sqlite3.connect("dados_min.db")
+conn = sqlite3.connect("dados.db")
 df.to_sql(
     "dados_diarios", conn, index=False, if_exists="append"
 )  # Use "replace" se desejar substituir a tabela existente
