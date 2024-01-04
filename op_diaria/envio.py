@@ -27,8 +27,8 @@ def enviar_mensagem(df):
     options = webdriver.ChromeOptions()
     # options.binary_location  = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
-    options.add_argument("--headless")
-    options.add_argument("--enable-logging --v=1")
+    # options.add_argument("--headless")
+    # options.add_argument("--enable-logging --v=1")
     # provide location where chrome stores profiles
     options.add_argument(r"--user-data-dir=/home/abs/.config/google-chrome")
 
@@ -74,7 +74,7 @@ def enviar_mensagem(df):
 
     button2 = driver.find_element(
         By.XPATH,
-        "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
+        "//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
     )
     time.sleep(2)
     button2.click()
