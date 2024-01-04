@@ -6,13 +6,13 @@ from selenium.webdriver.chrome.options import Options
 
 
 def recarregar_pagina():
-    # Configuração do Selenium
+    # Configuração do  Selenium
 
     data_atual = datetime.now().strftime("%Y-%m-%d")
 
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
-    options.binary_location = "/usr/local/bin/chromedriver"
+    # options.binary_location = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(
         executable_path="/usr/local/bin/chromedriver", options=options

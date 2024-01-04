@@ -6,7 +6,7 @@ from selenium.common.exceptions import TimeoutException
 import time
 
 
-# --------------------- MENSAGEM WHATSAPP ------------------------
+# --------------------- MENSAGEM  WHATSAPP ------------------------
 def enviar_mensagem(df):
     mensagem_whatsapp = (
         f"Geração total diária: %0A"
@@ -22,10 +22,10 @@ def enviar_mensagem(df):
 
     mensagem_codificada = mensagem_whatsapp
 
-    # mensagem_codificada = quote(mensagem_whatsapp222)
+    #  m ensagem_codificada = quote(mensagem_whatsapp222)
 
     options = webdriver.ChromeOptions()
-    options.binary_location = "/usr/local/bin/chromedriver"
+    # options.binary_location  = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
     options.add_argument("--headless")
 
