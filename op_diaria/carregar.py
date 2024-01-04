@@ -13,7 +13,7 @@ def recarregar_pagina():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.binary_location = "/usr/local/bin/chromedriver"
-
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(
         executable_path="/usr/local/bin/chromedriver", options=options
     )
