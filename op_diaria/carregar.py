@@ -16,7 +16,7 @@ def recarregar_pagina():
     options.add_argument("--no-sandbox")
     options.add_argument("--user-data-dir=/home/abs/.config/google-chrome")
     # provide the profile name with which we want to open browser
-    options.add_argument("--profile-directory=Profile 1")
+    options.add_argument("--profile-directory=sistema")
     options.add_argument("--enable-logging --v=1")
 
     driver = webdriver.Chrome(options=options)
@@ -92,4 +92,4 @@ def recarregar_pagina():
 
     # Fechar o navegador
     # driver.quit()
-    driver.quit
+    driver.quit()
