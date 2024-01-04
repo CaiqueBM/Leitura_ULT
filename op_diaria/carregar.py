@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from datetime import datetime
+from selenium.webdriver.chrome.options import Options
 
 
 def recarregar_pagina():

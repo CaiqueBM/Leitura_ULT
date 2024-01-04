@@ -22,10 +22,12 @@ def enviar_mensagem(df):
 
     mensagem_codificada = mensagem_whatsapp
 
-    # mensagem_codificada = quote(mensagem_whatsapp)
+    # mensagem_codificada = quote(mensagem_whatsapp222)
 
     options = webdriver.ChromeOptions()
     options.binary_location = "/usr/local/bin/chromedriver"
+    options.add_argument("--headless")
+
     # options.add_argument("--user-data-dir=C:/Users/lanch/AppData/Local/Google/Chrome/User Data")  # Path to your chrome profile
     # options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
     driver = webdriver.Chrome(options=options)
