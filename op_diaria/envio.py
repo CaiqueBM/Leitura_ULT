@@ -67,7 +67,6 @@ def enviar_mensagem(df):
     button1.click()
     time.sleep(100)
 
-    elementoExiste()
     button2 = driver.find_element(
         By.XPATH,
         "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
