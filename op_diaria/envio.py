@@ -34,7 +34,9 @@ def enviar_mensagem(df):
     options.add_argument("--profile-directory=Profile 4")
 
     # options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(
+        executable_path="/usr/local/bin/chromedriver", options=options
+    )
 
     # options.add_argument("--headless")
     # driver = webdriver.Chrome(options=options)
