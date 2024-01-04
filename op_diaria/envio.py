@@ -25,9 +25,9 @@ def enviar_mensagem(df):
     #  mensagem_codificada = quote(mensagem_whatsapp222)
 
     options = webdriver.ChromeOptions()
-    options.add_argument("--no-sandbox")
+    # options.add_argument("--no-sandbox")
     # options.add_argument("--headless")
-    options.add_argument("--user-data-dir=/home/abs/.config/google-chrome")
+    options.add_argument("--user-data-dir=/home/abs/.config/google-chrome/Profile 4")
     options.add_argument("--profile-directory=Profile 4")
     driver = webdriver.Chrome(options=options)
 
