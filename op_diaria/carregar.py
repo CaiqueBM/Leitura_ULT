@@ -11,6 +11,8 @@ def recarregar_pagina():
 
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
+    options.binary_location = "/usr/local/bin/chromedriver"
+
     driver = webdriver.Chrome(options=options)
 
     url_att1 = f"https://pages.solarz.com.br/shareable/usina/f80e8b26-d0f3-4735-a19a-015b4c1092fe"

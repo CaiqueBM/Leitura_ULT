@@ -2,8 +2,6 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import time
 
@@ -27,6 +25,7 @@ def enviar_mensagem(df):
     # mensagem_codificada = quote(mensagem_whatsapp)
 
     options = webdriver.ChromeOptions()
+    options.binary_location = "/usr/local/bin/chromedriver"
     # options.add_argument("--user-data-dir=C:/Users/lanch/AppData/Local/Google/Chrome/User Data")  # Path to your chrome profile
     # options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
     driver = webdriver.Chrome(options=options)
