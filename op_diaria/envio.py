@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
 import time
-from selenium.webdriver.common.keys import Keys
 
 
 # --------------------- MENSAGEM  WHATSAPP ------------------------
@@ -23,20 +22,14 @@ def enviar_mensagem(df):
 
     mensagem_codificada = mensagem_whatsapp
 
-    #  m ensagem_codificada = quote(mensagem_whatsapp222)
+    #  mensagem_codificada = quote(mensagem_whatsapp222)
 
     options = webdriver.ChromeOptions()
-    # options.binary_location  = "/usr/local/bin/chromedriver"
     options.add_argument("--no-sandbox")
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--user-data-dir=/home/abs/.config/google-chrome")
-    # provide the profile name with which we want to open browser
     options.add_argument("--profile-directory=Profile 4")
-
-    # options.add_argument("--profile-directory=Profile 1")  # Path to your chrome profile
-    driver = webdriver.Chrome(
-        executable_path="/usr/local/bin/chromedriver", options=options
-    )
+    driver = webdriver.Chrome(options=options)
 
     # options.add_argument("--headless")
     # driver = webdriver.Chrome(options=options)
