@@ -29,7 +29,7 @@ def enviar_mensagem(df):
     # options.add_argument("--no-sandbox")
     # options.add_argument("--headless")
     # profile_directory = "/home/abs/.mozilla/firefox/your_profile_directory"  # Replace with your Firefox profile directory
-    options.profile = profile_directory
+    # options.profile = profile_directory
     driver = webdriver.Firefox(options=options)
 
     # options.add_argument("--user-data-dir=/home/abs/.config/google-chrome/Profile 4")
