@@ -30,7 +30,7 @@ def enviar_mensagem(df):
     options.add_argument("--headless")
     options.add_argument("--enable-logging --v=1")
     # provide location where chrome stores profiles
-    options.add_argument(r"--user-data-dir=/home/username/.config/google-chrome")
+    options.add_argument(r"--user-data-dir=/home/abs/.config/google-chrome")
 
     # provide the profile name with which we want to open browser
     options.add_argument(r"--profile-directory=Profile 1")
