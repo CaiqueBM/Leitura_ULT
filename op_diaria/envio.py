@@ -31,9 +31,6 @@ def enviar_mensagem(df):
     options.add_argument("--profile-directory=Profile 4")
     driver = webdriver.Chrome(options=options)
 
-    # options.add_argument("--headless")
-    # driver = webdriver.Chrome(options=options)
-
     numero = "+5527996162054"
 
     url = "https://wa.me//" + numero + "?text=" + mensagem_codificada
@@ -42,7 +39,7 @@ def enviar_mensagem(df):
     # ULT 1
     driver.get(url)
 
-    time.sleep(20)
+    time.sleep(60)
 
     # pywhatkit.sendwhatmsg_instantly("+5527999438898", mensagem_whatsapp, 10, False, 15)
 
@@ -50,9 +47,9 @@ def enviar_mensagem(df):
         By.XPATH,
         "/html/body/div[1]/div[1]/div[2]/div/section/div/div/div/div[2]/div[1]/a",
     )
-    time.sleep(5)
+    time.sleep(10)
     button.click()
-    time.sleep(5)
+    time.sleep(10)
 
     button1 = driver.find_element(
         By.XPATH,
