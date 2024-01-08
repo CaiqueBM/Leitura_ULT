@@ -22,10 +22,17 @@ options.add_argument("--profile-directory=Profile 4")
 # options.add_argument("--enable-logging --v=1")
 driver = webdriver.Chrome(options=options)
 
+
+url = (
+    "https://api.callmebot.com/whatsapp.php?phone=5527999572760&text="
+    + mensagem_codificada
+    + "&apikey=3374968"
+)
+
 # options.add_argument("--user-data-dir=/home/abs/.config/google-chrome/Profile 4")
 # options.add_argument("--profile-directory=Profile 4")
 # driver = webdriver.Chrome(options=options)
-
+"""
 numero = "+5527996162054"
 
 url = "https://wa.me//" + numero + "?text=" + mensagem_codificada
@@ -46,6 +53,8 @@ time.sleep(10)
 button.click()
 time.sleep(10)
 
+print("carreguei a primeira tela")
+
 button1 = driver.find_element(
     By.XPATH,
     "/html/body/div[1]/div[1]/div[2]/div/section/div/div/div/div[3]/div/div/h4[2]/a",
@@ -54,29 +63,12 @@ time.sleep(5)
 button1.click()
 time.sleep(100)
 
-"""button2 = driver.find_element(
+button2 = driver.find_element(
     By.XPATH,
     "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
 )
 time.sleep(2)
 button2.click()
-time.sleep(5)"""
+time.sleep(5)
 
-
-"""button2 = driver.find_element(
-    "xpath",
-    "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div[2]/div[1]/p",
-)
-button2.send_keys(Keys.ENTER)
-time.sleep(5)"""
-
-# Espera até que o elemento seja visível (pode ajustar o timeout conforme necessário)
-element = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located(
-        (
-            By.XPATH,
-            "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
-        )
-    )
-)
-element.click()
+"""
