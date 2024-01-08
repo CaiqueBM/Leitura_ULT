@@ -18,7 +18,7 @@ options.add_argument("--no-sandbox")
 options.add_argument("--user-data-dir=/home/abs/.config/google-chrome")
 # provide the profile name with which we want to open browser
 options.add_argument("--profile-directory=Profile 4")
-options.add_argument("--enable-logging --v=1")
+# options.add_argument("--enable-logging --v=1")
 driver = webdriver.Chrome(options=options)
 
 # options.add_argument("--user-data-dir=/home/abs/.config/google-chrome/Profile 4")
@@ -53,10 +53,18 @@ time.sleep(5)
 button1.click()
 time.sleep(100)
 
-button2 = driver.find_element(
+"""button2 = driver.find_element(
     By.XPATH,
     "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button",
 )
 time.sleep(2)
 button2.click()
+time.sleep(5)"""
+
+
+button2 = driver.find_element(
+    "xpath",
+    "/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div[2]/div[1]/p",
+)
+button2.send_keys(Keys.ENTER)
 time.sleep(5)
